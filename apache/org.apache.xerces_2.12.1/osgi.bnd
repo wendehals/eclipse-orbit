@@ -7,7 +7,8 @@ Export-Package: \
  *.internal.*;x-internal:=true;version="${package-version}", \
  *.implementation.*;x-internal:=true;version="${package-version}", \
  *.impl.*;x-internal:=true;version="${package-version}", \
- *;version="${package-version}"
+ *;version="${package-version}", \
+ META-INF.services;version="2.12.1"
 
 Import-Package: \
  sun.io;resolution:=optional, \
