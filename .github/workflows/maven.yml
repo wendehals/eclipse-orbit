@@ -23,6 +23,7 @@ jobs:
         distribution: 'adopt'
         cache: maven
     - name: Build aggregation
-      run: mvn clean install -f releng/aggregationfeature/pom.xml
-    - name: Build repository
-      run: mvn clean package -f releng/repository/pom.xml
+      run: |    
+        cd apache/org.apache.xerces_2.12.1/
+        mvn clean package
+
