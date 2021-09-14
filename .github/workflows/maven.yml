@@ -1,7 +1,7 @@
 # This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
 # For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
 
-name: Java CI with Maven
+name: org.apache.xerces
 
 on:
   push:
@@ -26,4 +26,9 @@ jobs:
       run: |    
         cd apache/org.apache.xerces_2.12.1/
         mvn clean package
-
+    - name: Archive production artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: dist-without-markdown
+        path: |
+          apache/org.apache.xerces_2.12.1/target/**
